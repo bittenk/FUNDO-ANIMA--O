@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: black;
+}
+
+.conteiner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bolhas{
+    position: absolute;
+    display: flex;
+}
+
+.bolhas span{
+    width: 30px;
+    height: 30px;
+    background: #40E0D0;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #40E0D044,
+    0 0 50px #40E0D0,
+    0 0 100px #40E0D0;
+    animation: animar calc(200s / var(--i)) linear infinite;
+}
+
+@keyframes animar{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+
+.bolhas span:nth-of-type(even){
+    background: #00FF00;
+    box-shadow: 0 0 0 10px #00FF0044,
+    0 0 50px #00FF00,
+    0 0 100px #00FF00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
